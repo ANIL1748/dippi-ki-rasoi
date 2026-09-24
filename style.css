@@ -31,6 +31,16 @@ a { color: inherit; text-decoration: none; }
 .brand-mark { font-size: 32px; }
 .brand strong { display: block; font-size: 20px; }
 .brand small { display: block; color: var(--muted); font-size: 11px; }
+.brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+.mobile-logo-wrapper {
+  display: none;
+}
 .menu { display: flex; gap: 26px; font-weight: 600; font-size: 14px; }
 .menu a:hover { color: var(--accent); }
 .menu-btn { display: none; border: 0; background: none; font-size: 25px; }
@@ -115,6 +125,20 @@ footer { background: #201712; color: white; padding: 28px 0; }
 
 @media (max-width: 800px) {
   .menu-btn { display: block; }
+  .brand-logo { height: 40px; }
+  .brand strong { font-size: 18px; }
+  .mobile-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-menu-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+  }
   .menu { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 20px 4%; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; }
   .menu.open { display: flex; }
   .hero-grid, .about-grid { grid-template-columns: 1fr; }
